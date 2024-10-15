@@ -1,24 +1,29 @@
-# message
+# Лента сообщений
 
-## Project setup
+## Команды для запуска
+
 ```
 npm install
+npm run serve-json (в одном терминале)
+npm run serve (в другом терминале)
 ```
 
-### Compiles and hot-reloads for development
+### Описание
+
+Проект показывает сообщения по json файлу формата:
+
 ```
-npm run serve
+"date": "1697-08-31T23:55:22Z",
+"authorName": "Шарль Перро",
+"authorUrl": "https://dlya-detey.com/skazki/sharlya-perro/112-krasnaya-shapochka.html",
+"content": "К счастью, мимо проходил лесник. Он уже издали заметил, что случилось что-то неладное: двдомика были распахнуты настежь, и оттуда доносился громкий храп. Лесник снял с плеча двустволкподкрался к окну. Он чуть не вскрикнул, увидев развалившегося на бабушкиной кровати волка с вздувшибрюхом. Не раздумывая, лесник вбежал в дом, выхватил из-за пояса охотничий нож и мгновенно распорол вобрюхо. Оттуда выскочила Красная Шапочка, а за ней и бабушка. Ох, как темно было в брюхе у волка! Страдаже подумать, что бы было, не приди храбрый и находчивый лесник вовремя.",
+"contentPostTones": [
+  {
+    "position": 0,
+    "tone": 0,
+    "length": 578
+  }
+]
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Где поле contentPostTones, показывает символы которые нужно закрасить по градиенту где (-1: красный, 0: желтый, 1 : зеленый)
